@@ -1,0 +1,42 @@
+html,body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  height: auto;
+}
+header {
+  width: 100%;
+  background: var(--bgColor1);
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.fullNav {
+  width: 20vw;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 1vh 2vw;
+  align-content
+}
+
+#profileIcon {
+  width: 7vh;
+  min-width: 70px;
+  height: 7vh;
+  min-height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--textColor1); 
+  margin-left: 2vw
+}
+
+#profileIcon img {
+  width: 100%;
+}
+
+.logOutButton {
+  border: none;
+  background: none;
+  text-decoration: underline;
+  color: var(--buttonColor);
+}
