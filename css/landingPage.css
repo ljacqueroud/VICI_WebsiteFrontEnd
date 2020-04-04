@@ -1,0 +1,152 @@
+:root{
+  --bgColor1:rgba(25, 130, 4, 1);
+  --bgColor2:rgb(198, 242, 200);
+  --textColor1:rgba(131, 196, 117, 1);
+  --textColor2:rgb(57, 94, 52);
+  --alertColor:rgba(0,0,0,1);
+  --successColor1:rgba(0,0,0,1);
+  --successColor2:rgba(0,0,0,1);
+  --buttonColor:rgb(56, 174, 81);
+}
+
+* {
+  background-color: inherit;
+  color: inherit;
+  font-family:Arial, Helvetica, sans-serif;
+	font-size:inherit;
+	line-height:1.6em;
+	margin:0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  color: #333;
+}
+
+main {
+  background-image:url('../images/landingBg.jpg');
+  background-position: center right;
+  background-size: cover;
+}
+
+.ENSelect, .FRSelect {
+  display: none;
+}
+
+div #ENCheckbox:checked ~ .ENSelect {
+  display: block;
+}
+
+div #FRCheckbox:checked ~ .FRSelect {
+  display: block;
+}
+
+.langCheckbox {
+  background-color: var(--bgColor1);
+  color: var(--textColor1);
+  padding-right: 50px;
+  text-align: right;
+}
+
+.langCheckboxLabel {
+}
+
+.container {
+  margin: 20px 15%;
+  padding: 20px;
+  color: var(--textColor1);
+  background-color: var(--bgColor1);
+  text-align: center;
+  border-radius: 20px;
+}
+
+#viciLogo {
+  height: 100px;
+}
+
+.mainTitle {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--textColor1);
+  text-align: center;
+}
+
+.landingPageNav {
+  margin-top: 50px;
+  display: flex;
+  justify-content:space-evenly;
+  flex-direction: row;
+}
+
+.buttonPanel {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-basis: 35%;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  background-color: var(--bgColor2);
+  border-radius: 10px;
+  padding: 10px;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+
+.linkButton {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 60%;
+  height: 35px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--buttonColor);
+  border-radius: 8px;
+  margin: 10px;
+}
+
+.linkButton a {
+  text-decoration: none;
+}
+
+.linkButton a:hover {
+  color: var(--textColor2);
+}
+
+.mainFooter {
+  display: flex;
+  background-color: var(--bgColor1);
+  color: var(--textColor1);
+  justify-content: space-between;
+  padding: 5px 32% 10px 32%;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 48%;
+}
+
+.footerContainer a {
+  text-decoration: none;
+}
+
+.footerContainer a:hover {
+  color: var(--textColor2);
+}
+
+
+@media(max-width:600px){
+  .landingPageNav{
+    flex-direction: column;
+    margin-top:30px;
+  }
+  .buttonPanel {
+    margin-top: 20px;
+  }
+}
+
+

@@ -2,54 +2,40 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/landing_page.css">
+  <link rel="stylesheet" href="css/landingPage.css">
 
   <title>Vici | Home</title>
 </head>
 
 <body>
   <main>
-    <input type="radio" id="EN_checkbox" name="lang" value="EN" checked="true">
-    <label for="EN_checkbox">EN</label>
-    <input type="radio" id="FR_checkbox" name="lang" value="FR">
-    <label for="FR_checkbox">FR</label>
-
-    <div class="FR_container">
-      <h1 class="main_title">Welcome to VICI</h1>
-      <h2>FR Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
-
-      <div class="landing_page_nav">
-        <div class="button_panel">
-          <p>Description. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <div class="link_button">
-            <a href="singn_in_up.html"></a>
-          </div>
-        </div>
-
-        <div class="button_panel">
-          <p>Description. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          <div class="link_button">
-            <a href="about.html"></a>
-          </div>
-        </div>
-      </div>
+    <div class="langCheckbox">
+      <input type="radio" id="ENCheckbox" name="lang" value="EN" checked="true">
+      <label class="langCheckboxLabel" for="ENCheckbox">EN</label>
+      <input type="radio" id="FRCheckbox" name="lang" value="FR">
+      <label class="langCheckboxLabel" for="FRCheckbox">FR</label>
     </div>
 
-    <div class="EN_container">
-      <h1 class="main_title">Welcome to VICI</h1>
+    <div class="ENContainer container">
+      <img src="images/viciLogo.jpg" id="viciLogo" alt="logo">
+      <h1 class="mainTitle" id="mainTitleLanding">Welcome to VICI</h1>
       <h2>EN Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
 
-      <div class="landing_page_nav">
-        <div class="button_panel">
-          <p>Description. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <div class="link_button">
-            <a href="sign_in_up.html">Sign In/Up</a>
+      <div class="landingPageNav">
+        <div class="buttonPanel">
+          <div class="buttonDescription">
+            <p>Description. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          </div>
+          <div class="linkButton">
+            <a href="signInUp.html">Sign In/Up</a>
           </div>
         </div>
 
-        <div class="button_panel">
-          <p>Description. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          <div class="link_button">
+        <div class="buttonPanel">
+          <div class="buttonDescription">
+            <p>Description. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          </div>
+          <div class="linkButton">
             <a href="about.html">About Vici</a>
           </div>
         </div>
@@ -58,5 +44,19 @@
   </main>
 
   <footer>
+    <div class="mainFooter">
+      <div class="footerContainer">
+        <p>Help</p>
+        <hr>
+        <a href="about.html">FAQ</a>
+      </div>
+      <div class="footerContainer">
+        <p>About us</p>
+        <hr>
+        <a href="about.html">Project</a>
+        <a href="about.html">Team</a>
+        <a href="about.html">Contact Us</a>
+      </div>
+    </div>
   </footer>
 </body>
