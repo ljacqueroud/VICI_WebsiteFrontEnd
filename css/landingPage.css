@@ -1,14 +1,3 @@
-:root{
-  --bgColor1:rgba(25, 130, 4, 1);
-  --bgColor2:rgb(198, 242, 200);
-  --textColor1:rgba(131, 196, 117, 1);
-  --textColor2:rgb(57, 94, 52);
-  --alertColor:rgba(0,0,0,1);
-  --successColor1:rgba(0,0,0,1);
-  --successColor2:rgba(0,0,0,1);
-  --buttonColor:rgb(56, 174, 81);
-}
-
 * {
   background-color: inherit;
   color: inherit;
@@ -28,6 +17,7 @@ main {
   background-image:url('../images/landingBg.jpg');
   background-position: center right;
   background-size: cover;
+  min-height: 90vh;
 }
 
 .ENSelect, .FRSelect {
@@ -148,5 +138,3 @@ div #FRCheckbox:checked ~ .FRSelect {
     margin-top: 20px;
   }
 }
-
-
