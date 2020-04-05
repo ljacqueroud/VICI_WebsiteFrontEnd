@@ -94,12 +94,12 @@ header {
 
 .footerContainer:first-child {
   margin: 0.3em 0.5em 0.8em auto;
-  width: 7em;
+  width: 9em;
 }
 
 .footerContainer:last-child {
   margin: 0.3em auto 0.8em 0.5em;
-  width: 7em;
+  width: 9em;
 }
 
 .footerContainer a {

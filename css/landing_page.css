@@ -68,14 +68,14 @@ main {
   display: flex;
   position: absolute;
   bottom: 0;
-  width: 60%;
+  width:80%;
   height: 6vh;
   font-size: 12pt;
   align-items: center;
   justify-content: center;
   background-color: var(--bgColor4);
   border-radius: 1vh;
-  margin: 2vh auto;
+  margin: 2vh 2vh;
   overflow: hidden;
 }
 
