@@ -1,13 +1,15 @@
 :root {
-  --bgColor1:rgba(25, 130, 4, 1);
-  --bgColorHover1:rgb(0,0,0);
+  --bgColor1:rgb(239, 244, 238);
+  --bgColorHover1:rgb(40, 62, 39);
   --bgColor2:rgb(76, 125, 78);
   --bgColorHover2:rgb(56, 98, 45);
   --bgColor3:rgb(141, 185, 129);
   --bgColorHover3:rgb(0,0,0);
   --bgColor4:rgb(89, 108, 84);
   --bgColorHover4:rgb(0,0,0);
-  --textColor1:rgb(104, 159, 92);
+  --headerColor:rgb(109, 145, 102);
+  --footerColor:rgb(168,195,162);
+  --textColor1:rgb(58, 83, 52);
   --textColorHover1:rgb(0,0,0);
   --textColor2:rgb(139, 187, 133);
   --textColorHover2:rgb(155, 223, 160);
@@ -15,6 +17,10 @@
   --textColorHover3:rgb(114, 166, 103);
   --textColor4:rgb(130, 181, 123);
   --textColorHover4:rgb(178, 232, 167);
+  --textHeaderColor:rgb(56,75,52);
+  --textHeaderHoverColor:rgb(34,45,31);
+  --textFooterColor:rgb(88,124,80);
+  --textFooterHoverColor:rgb(44,62,40);
   --alertColor:rgba(255, 127, 0, 1);
   --successColor1:rgba(100,230,160,1);
   --successColor2:rgba(53, 169, 204,1);
@@ -35,7 +41,7 @@ header {
   flex-direction: row-reverse;
   width: 100%;
   height: 2em;
-  background: var(--bgColor2);
+  background: var(--headerColor);
   margin:0;
   padding: 0;
 }
@@ -57,7 +63,7 @@ header {
 
 .langCheckbox select {
   background-color: inherit;
-  color: var(--textColor2);
+  color: var(--textHeaderColor);
   font-size: 12pt;
   appearance: none;
   -moz-appearance: none;
@@ -66,14 +72,14 @@ header {
 }
 
 .langCheckbox select:hover {
-  color: var(--textColorHover2);
+  color: var(--textHeaderHoverColor);
 }
 
 /* ******** FOOTER ********* */
 .mainFooter {
   display: flex;
-  background-color: var(--bgColor2);
-  color: var(--textColor2);
+  background-color: var(--footerColor);
+  color: var(--textFooterColor);
   justify-content: space-between;
 }
 
@@ -93,16 +99,18 @@ header {
 }
 
 .footerContainer a {
-  color: var(--textColor2);
+  color: var(--textFooterColor);
   text-decoration: none;
 }
 
 .footerContainer a:hover {
-  color: var(--textColorHover2);
+  color: var(--textFooterHoverColor);
 }
 
 .footerContainer hr {
-  color: var(--textColor2);
+  background-color: var(--textFooterColor);
+  border-top: 0;
+  border-bottom: 2px solid;
 }
 
 /* *********** OTHER ********** */
