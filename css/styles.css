@@ -7,8 +7,47 @@
   --successColor1:rgba(100,230,160,1);
   --successColor2:rgba(53, 169, 204,1);
   --buttonColor:rgb(56, 174, 81);
+  --fontTitle:Arial;
+  --fontParagraph:Arial;
 }
 
+* {
+  font-family: var(--fontParagraph);
+}
+
+/* ********** HEADER ********** */
+header {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: 2em;
+  background: var(--bgColor1);
+}
+
+.mainHeader {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: auto 0px;
+  align-items: center;
+  padding-right: 5vw;
+}
+
+.langCheckbox {
+  color: var(--textColor2);
+  float: right;
+  width: 4em;
+}
+
+.langCheckbox select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+}
+
+/* *********** OTHER ********** */
 .errorMsg {
   color:var(--alertColor);
 }
