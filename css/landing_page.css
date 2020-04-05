@@ -23,21 +23,21 @@ main {
 
 .container {
   margin: 4vh 15vw;
-  padding: 4vh 7vw;
-  color: var(--textColor2);
+  padding: 0vh 7vw 4vh 7vw;
+  color: var(--textColor1);
   background-color: var(--bgColor1);
   text-align: center;
   border-radius: 3vh;
 }
 
 #viciLogo {
-  height: 20vh;
+  height: 30vh;
 }
 
 .mainTitle {
   font-size: 26pt;
   font-weight: bold;
-  color: var(--textColor2);
+  color: var(--textColor1);
   text-align: center;
 }
 
@@ -76,15 +76,20 @@ main {
   background-color: var(--bgColor4);
   border-radius: 1vh;
   margin: 2vh auto;
+  overflow: hidden;
 }
 
 .linkButton a {
+  height: 100%;
+  width: 100%;
   text-decoration: none;
-  color: var(--textColor4)
+  color: var(--textColor4);
+  line-height: 6vh;
 }
 
 .linkButton a:hover {
   color: var(--textColorHover4);
+  background-color: var(--bgColorHover4);
   cursor: pointer;
 }
 

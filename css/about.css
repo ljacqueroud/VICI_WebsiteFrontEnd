@@ -9,7 +9,7 @@ body{
 
 main {
   background-color: var(--bgColor1);
-  color: var(--textColor1);
+  color: var(--textColor4);
   padding: 10vh 20vw;
   display: grid;
 }

@@ -1,22 +1,22 @@
 :root {
   --bgColor1:rgb(239, 244, 238);
-  --bgColorHover1:rgb(40, 62, 39);
-  --bgColor2:rgb(241,250,235);
-  --bgColorHover2:rgb(191,226,156);
-  --bgColor3:rgb(141, 185, 129);
-  --bgColorHover3:rgb(0,0,0);
-  --bgColor4:rgb(89, 108, 84);
-  --bgColorHover4:rgb(0,0,0);
+  --bgColorHover1:rgb(0,0,0);
+  --bgColor2:rgb(0,0,0);
+  --bgColorHover2:rgb(0,0,0);
+  --bgColor3:rgb(144, 196, 130);
+  --bgColorHover3:rgb(91,156,73);
+  --bgColor4:rgb(197, 210, 160);
+  --bgColorHover4:rgb(202,221,152);
   --headerColor:rgb(109, 145, 102);
   --footerColor:rgb(168,195,162);
-  --textColor1:rgb(58, 83, 52);
-  --textColorHover1:rgb(0,0,0);
-  --textColor2:rgb(141,211,95);
-  --textColorHover2:rgb(102,158,46);
+  --textColor1:rgb(141,211,95);
+  --textColorHover1:rgb(102,158,46);
+  --textColor2:rgb(0,0,0);
+  --textColorHover2:rgb(0,0,0);
   --textColor3:rgb(70, 104, 65);
   --textColorHover3:rgb(114, 166, 103);
-  --textColor4:rgb(130, 181, 123);
-  --textColorHover4:rgb(178, 232, 167);
+  --textColor4:rgb(105, 106, 70);
+  --textColorHover4:rgb(109,134,45);
   --textHeaderColor:rgb(56,75,52);
   --textHeaderHoverColor:rgb(34,45,31);
   --textFooterColor:rgb(88,124,80);
@@ -33,6 +33,11 @@
   font-family: var(--fontParagraph);
   margin:0;
   padding: 0;
+}
+
+hr {
+  border-top: 0;
+  border-bottom: 2px solid;
 }
 
 /* ********** HEADER ********** */
@@ -111,8 +116,6 @@ header {
 
 .footerContainer hr {
   background-color: var(--textFooterColor);
-  border-top: 0;
-  border-bottom: 2px solid;
 }
 
 /* *********** OTHER ********** */
