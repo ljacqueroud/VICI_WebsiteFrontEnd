@@ -92,6 +92,11 @@ function submitCb(evt) {
       document.getElementById('submitErrorJS').innerHTML="please fill in correctly the form"
       return false;
     }
+    else if (!document.getElementById('termsAndConditionsCheck').checked) {
+      evt.preventDefault();
+      document.getElementById('submitErrorJS').innerHTML="Please accept the terms and conditions"
+      return false;
+    }
 
     //ADD OTHER CHECKS
   }
