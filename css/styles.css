@@ -32,7 +32,7 @@
   background: var(--successColor1);
 }
 
-.inlineInputsContainer {
+.inlineInputContainer {
   display: flex;
   width: 100%;
   justify-content: space-between;
