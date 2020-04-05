@@ -1,5 +1,12 @@
 /* @author: Jonas T. Ulbrich
  * @date: 27.03.2020
+ * To implement call script in head and set following html at desired position:
+ <div id="file_reader_id" class="file_reader" >
+   <script type="text/javascript">
+     var readerImgs=new file_reader('file_reader_id','fs','cb','dz');
+   </script>
+ </div>
+ * to deactivate  drag and drop don't feed 'dz' as parameter or set to false/undefined
  */
 
  // Check for the various File API support.
@@ -7,7 +14,7 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
   console.log("All the File APIs are supported the file_reader class can be defined properly!");
 }
 else
-  alert('The File APIs are not fully supported in this browser.');
+  alert('The File APIs are not fully supported in this browser! Uploading files may not work properly...');
 
 class file_reader extends FileReader {
   constructor(container_id,file_select_id,clear_button_id,drop_zone_id,ManageFiles_cb) {
@@ -22,7 +29,6 @@ class file_reader extends FileReader {
       this.SetupDragZone(drop_zone_id);
     this.SetupFileClear(clear_button_id);
     this.SetupFileSelect(file_select_id);
-
   }
 
   CreateHTMLFileReader(container_id,file_select_id,clear_button_id,drop_zone_id) {
@@ -31,7 +37,7 @@ class file_reader extends FileReader {
     this.drop_zone_id=drop_zone_id;
     this.drop_zone_file_container_id=drop_zone_id+'_file_container';
 
-    var html=`<input type="file" id="`+this.file_select_id+`" name="files[]" multiple />
+    var html=`<input class="file_select" type="file" id="`+this.file_select_id+`" name="" multiple />
     <div class="drop_zone" id="`+this.drop_zone_id+`">
       <div class="drop_zone_file_container" id="`+this.drop_zone_file_container_id+`">
       </div>
@@ -53,8 +59,8 @@ class file_reader extends FileReader {
 
   SetupDragZone(drop_zone_id) {
     var dropZone = document.getElementById(drop_zone_id);
-    dropZone.addEventListener('dragover', this.DragOver_cb, false);
-    dropZone.addEventListener('dragleave', this.DragLeave_cb, false);
+    dropZone.addEventListener('dragover', this.DragOver_cb.bind(this), false);
+    dropZone.addEventListener('dragleave', this.DragLeave_cb.bind(this), false);
     dropZone.addEventListener('drop', this.DropFile_cb.bind(this), false);
     document.getElementById(drop_zone_id).innerHTML+= '\n<p class="drop_here">Drop files here</p>';
   }
@@ -73,15 +79,6 @@ class file_reader extends FileReader {
     this.ManageFiles_cb=ManageFiles_cb;
   }
 
-  /* @brief callback for file selection menu triggered by event of input
-   * @param evt               triggering event
-   * @note requires following html:
-     <input type="file" id="file_select" name="files[]" multiple />
-     <script type="text/javascript">
-       //Setup event listener for file reader
-       document.getElementById('file_select').addEventListener('change', FileSelect_cb, false);
-     </script>
-   */
   FileSelect_cb(evt) {
     //retrieve files
     var files=evt.target.files
@@ -91,13 +88,6 @@ class file_reader extends FileReader {
       this.ManageFiles_cb(this.file_list,this);
   }
 
-
-  /* @brief callbacks for drag and drop file loading triggered by event of input
-   * @param evt               triggering event
-   * @param ManageFiles_cb      function which handels how
-   * @note requires following html:
-     <div id="drop_zone">Drop files here</div>
-   */
   DropFile_cb(evt) {
     //stop propagation on other elements
     evt.stopPropagation();
@@ -161,12 +151,16 @@ class file_reader extends FileReader {
           that.file_data[file_idx]=r;
 
           //set tb
-          document.getElementById(this.drop_zone_file_container_id+'_tb'+file_idx).src="img/plain_file_ico.png";
+          document.getElementById(that.drop_zone_file_container_id+'_tb'+file_idx).src="img/plain_file_ico.png";
         };
       })(idx,this);
 
       //read file
       reader.readAsDataURL(file);
     }
+  }
+
+  GetFileData() {
+    return this.file_data;
   }
 }

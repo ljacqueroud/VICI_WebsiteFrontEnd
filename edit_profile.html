@@ -2,15 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/edit_profile.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/file_reader.css">
+    <link rel="stylesheet" href="css/edit_profile.css">
     <script type="text/javascript" src="js/file_reader.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/edit_profile_check.js" charset="utf-8"></script>
 
     </script>
     <title>Vici | Edit Profile</title>
   </head>
-  <body>
+  <body onload="setupFormCheck([readerLogo, readerCover, readerImgs])">
     <header>
       <div class="fullNav">
         <div id="profileIcon">
@@ -59,7 +60,17 @@
             <input class="textInput" type="text" name="" value="">
 
             <label for="">Logo</label>
+            <div id="logoFileReader" class="file_reader" >
+              <script type="text/javascript">
+                var readerLogo=new file_reader('logoFileReader','logoFileReaderFS','logoFileReaderC','logoFileReaderDZ');
+              </script>
+            </div>
             <label for="">Cover Photo</label>
+            <div id="coverFileReader" class="file_reader" >
+              <script type="text/javascript">
+                var readerCover=new file_reader('coverFileReader','coverFileReaderFS','coverFileReaderC','coverFileReaderDZ');
+              </script>
+            </div>
 
             <label for="">Category</label>
             <label for="">Services</label>
@@ -87,16 +98,16 @@
             <textarea name="descritionTxt" rows="8" cols="80"></textarea>
 
             <label for="">Info Images</label>
-            <div id="testFileReader" class="file_reader" >
+            <div id="imagesFileReader" class="file_reader" >
               <script type="text/javascript">
-                var readerImgs=new file_reader('testFileReader','fs','cb','dz');
+                var readerImgs=new file_reader('imagesFileReader','imagesFileReaderFS','imagesFileReaderC','imagesFileReaderDZ');
               </script>
             </div>
 
             <label for="">How Can People Help?</label>
             <textarea name="helpUsTxt" rows="8" cols="80"></textarea>
 
-            <input class="submitButton" type="submit" name="changeProfileData" value="Apply Changes">
+            <input class="submitButton"  id="applyProfileChanges" type="submit" name="changeProfileData" value="Apply Changes">
           </form>
         </div>
       </div>
