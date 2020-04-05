@@ -2,7 +2,6 @@
   background-color: inherit;
   color: inherit;
 	font-size:inherit;
-
 }
 
 body {
@@ -13,9 +12,11 @@ body {
 
 /* ******** MAIN ********* */
 main {
+  /*
   background-image:url('../img/landingBg.jpg');
   background-position: center right;
-  background-size: cover;
+  background-size: cover;*/
+  background-color: var(--bgColor1);
   min-height: calc(100vh - 3.9em);
   overflow: auto;
 }
@@ -24,9 +25,9 @@ main {
   margin: 4vh 15vw;
   padding: 4vh 7vw;
   color: var(--textColor2);
-  background-color: var(--bgColor2);
+  background-color: var(--bgColor1);
   text-align: center;
-  border-radius: 5vh;
+  border-radius: 3vh;
 }
 
 #viciLogo {
@@ -84,6 +85,7 @@ main {
 
 .linkButton a:hover {
   color: var(--textColorHover4);
+  cursor: pointer;
 }
 
 @media(max-width:600px){

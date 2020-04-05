@@ -1,8 +1,8 @@
 :root {
   --bgColor1:rgb(239, 244, 238);
   --bgColorHover1:rgb(40, 62, 39);
-  --bgColor2:rgb(76, 125, 78);
-  --bgColorHover2:rgb(56, 98, 45);
+  --bgColor2:rgb(241,250,235);
+  --bgColorHover2:rgb(191,226,156);
   --bgColor3:rgb(141, 185, 129);
   --bgColorHover3:rgb(0,0,0);
   --bgColor4:rgb(89, 108, 84);
@@ -11,8 +11,8 @@
   --footerColor:rgb(168,195,162);
   --textColor1:rgb(58, 83, 52);
   --textColorHover1:rgb(0,0,0);
-  --textColor2:rgb(139, 187, 133);
-  --textColorHover2:rgb(155, 223, 160);
+  --textColor2:rgb(141,211,95);
+  --textColorHover2:rgb(102,158,46);
   --textColor3:rgb(70, 104, 65);
   --textColorHover3:rgb(114, 166, 103);
   --textColor4:rgb(130, 181, 123);
@@ -73,6 +73,7 @@ header {
 
 .langCheckbox select:hover {
   color: var(--textHeaderHoverColor);
+  cursor: pointer;
 }
 
 /* ******** FOOTER ********* */
@@ -105,6 +106,7 @@ header {
 
 .footerContainer a:hover {
   color: var(--textFooterHoverColor);
+  cursor: pointer;
 }
 
 .footerContainer hr {
@@ -121,12 +123,6 @@ header {
 .textInput {
   border: none;
   height: 1.5em;
-  font-size: 12pt;
-  padding: 0.2em 0 0.2em 1em;
-}
-
-textarea {
-  border: none;
   font-size: 12pt;
   padding: 0.2em 0 0.2em 1em;
 }
