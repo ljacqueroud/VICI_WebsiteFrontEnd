@@ -1,28 +1,22 @@
-html,body {
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
-  height: auto;
+* {
+  background-color: inherit;
+  color: inherit;
 }
 
-html {
-  height: 100%;
+body{
+  min-height: calc(100vh-3.9em);
 }
 
-body {
-  height: 100%;
-  overflow: auto;
+main {
+  background-color: var(--bgColor1);
+  color: var(--textColor1);
+  padding: 10vh 20vw;
+  display: grid;
 }
-
 
 /*HEADER*/
 header {
-  width: 100%;
-  background: var(--bgColor1);
-  display: flex;
-  position: fixed;
-  z-index: 1;
-  flex-direction: row-reverse;
+  height: min-content;
 }
 
 .fullNav {
@@ -40,15 +34,15 @@ header {
   min-height: 70px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid var(--textColor1); 
-  margin: 1vw;
+  border: 3px solid var(--textColor1);
+  margin: 1vh;
 }
 
 #profileIcon img {
   width: 100%;
 }
 
-form {
+header form {
   position: relative;
   height: 7vh;
   min-height: 70px;
@@ -66,10 +60,11 @@ form {
 }
 
 .logOutButton:hover {
-  
+
   text-decoration: underline;
 }
- /*MAIN*/ 
+
+/*MAIN
 
 main {
   position: fixed;
@@ -130,7 +125,7 @@ main {
   font-family: var(--fontParagraph);
   font-size: 11pt;
   letter-spacing: normal;
-  
+
 }
 
 .file_select_buttons {
@@ -171,7 +166,7 @@ main {
   line-height: 5vw;
 }
 
-.uploaded_item .file_tb_container { 
+.uploaded_item .file_tb_container {
 }
 
 .uploaded_item {
