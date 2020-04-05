@@ -14,7 +14,7 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
   console.log("All the File APIs are supported the file_reader class can be defined properly!");
 }
 else
-  alert('The File APIs are not fully supported in this browser.');
+  alert('The File APIs are not fully supported in this browser! Uploading files may not work properly...');
 
 class file_reader extends FileReader {
   constructor(container_id,file_select_id,clear_button_id,drop_zone_id,ManageFiles_cb) {
@@ -29,7 +29,6 @@ class file_reader extends FileReader {
       this.SetupDragZone(drop_zone_id);
     this.SetupFileClear(clear_button_id);
     this.SetupFileSelect(file_select_id);
-
   }
 
   CreateHTMLFileReader(container_id,file_select_id,clear_button_id,drop_zone_id) {
@@ -80,15 +79,6 @@ class file_reader extends FileReader {
     this.ManageFiles_cb=ManageFiles_cb;
   }
 
-  /* @brief callback for file selection menu triggered by event of input
-   * @param evt               triggering event
-   * @note requires following html:
-     <input type="file" id="file_select" name="files[]" multiple />
-     <script type="text/javascript">
-       //Setup event listener for file reader
-       document.getElementById('file_select').addEventListener('change', FileSelect_cb, false);
-     </script>
-   */
   FileSelect_cb(evt) {
     //retrieve files
     var files=evt.target.files
@@ -98,13 +88,6 @@ class file_reader extends FileReader {
       this.ManageFiles_cb(this.file_list,this);
   }
 
-
-  /* @brief callbacks for drag and drop file loading triggered by event of input
-   * @param evt               triggering event
-   * @param ManageFiles_cb      function which handels how
-   * @note requires following html:
-     <div id="drop_zone">Drop files here</div>
-   */
   DropFile_cb(evt) {
     //stop propagation on other elements
     evt.stopPropagation();

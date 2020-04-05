@@ -117,6 +117,12 @@ header {
   padding: 0.2em 0 0.2em 1em;
 }
 
+textarea {
+  border: none;
+  font-size: 12pt;
+  padding: 0.2em 0 0.2em 1em;
+}
+
 .submitButton {
   width: min-content;
   height: 2.5em;
