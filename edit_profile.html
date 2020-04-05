@@ -24,9 +24,50 @@
         </div>
       </nav>
       <div class="editProfileContainer">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        <div class="lol">
+        <div class="formContainer">
+          <h2 class="formTitle">Manage Accound Data</h2>
+          <form class="editData" id="changeAccountData" action="index.html" method="post">
 
+            <label for="changeEmail">Change E-Mail</label>
+            <span class="errorMsg" id="emailError">{{errorMsgEmail}}</span>
+            <span class="errorMsg" id="emailErrorJS"></span>
+            <input class="textInput" type="text" name="email" placeholder="address@example.ch">
+
+            <label for="pw">Password</label>
+            <span class="errorMsg" id="pwError">{{errorMsgPw}}</span>
+            <span class="errorMsg" id="pwErrorJS"></span>
+            <input class="textInput" type="password" id="pw" name="pwLogIn">
+
+            <label for="pwConfirm">Confirm Password</label>
+            <span class="errorMsg" id="pwConfirmError">{{errorMsgPwConfirm}}</span>
+            <span class="errorMsg" id="pwConfirmErrorJS"></span>
+            <input class="textInput" type="password" id="pwConfirm" name="pwConfirm">
+
+            <input type="submit" name="changeAccountData" value="Apply Changes">
+          </form>
+        </div>
+
+        <div class="formContainer">
+          <h2 class="formTitle">Manage Profile</h2>
+          <form class="editData" id="changeProfileData" action="index.html" method="post">
+
+            <label for="changeEmail">Change E-Mail</label>
+            <span class="errorMsg" id="emailError">{{errorMsgEmail}}</span>
+            <span class="errorMsg" id="emailErrorJS"></span>
+            <input class="textInput" type="text" name="email" placeholder="address@example.ch">
+
+            <label for="pw">Password</label>
+            <span class="errorMsg" id="pwError">{{errorMsgPw}}</span>
+            <span class="errorMsg" id="pwErrorJS"></span>
+            <input class="textInput" type="password" id="pw" name="pwLogIn">
+
+            <label for="pwConfirm">Confirm Password</label>
+            <span class="errorMsg" id="pwConfirmError">{{errorMsgPwConfirm}}</span>
+            <span class="errorMsg" id="pwConfirmErrorJS"></span>
+            <input class="textInput" type="password" id="pwConfirm" name="pwConfirm">
+
+            <input class="submitButton" type="submit" name="changeAccountData" value="Apply Changes">
+          </form>
         </div>
       </div>
 

@@ -8,3 +8,26 @@
   --successColor2:rgba(53, 169, 204,1);
   --buttonColor:rgb(56, 174, 81);
 }
+
+.errorMsg {
+  color:var(--alertColor);
+}
+
+.textInput {
+  border: none;
+  height: 1.5em;
+  font-size: 12pt;
+  padding: 0.2em 0 0.2em 1em;
+}
+
+.submitButton {
+  width: 5vw;
+  height: 2.5em;
+  border: none;
+  background: var(--successColor2);
+  margin: 0px auto;
+}
+
+.submitButton:hover {
+  background: var(--successColor1);
+}
