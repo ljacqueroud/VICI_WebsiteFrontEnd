@@ -25,7 +25,7 @@
       </nav>
       <div class="editProfileContainer">
         <div class="formContainer">
-          <h2 class="formTitle">Manage Accound Data</h2>
+          <h2 class="formTitle">Manage Account Data</h2>
           <form class="editData" id="changeAccountData" action="index.html" method="post">
 
             <label for="changeEmail">Change E-Mail</label>
@@ -43,30 +43,50 @@
             <span class="errorMsg" id="pwConfirmErrorJS"></span>
             <input class="textInput" type="password" id="pwConfirm" name="pwConfirm">
 
-            <input type="submit" name="changeAccountData" value="Apply Changes">
+            <input class="submitButton" type="submit" name="changeAccountData" value="Apply Changes">
           </form>
         </div>
 
         <div class="formContainer">
           <h2 class="formTitle">Manage Profile</h2>
           <form class="editData" id="changeProfileData" action="index.html" method="post">
+            <h3>General</h3>
+            <label for="">Company Name</label>
+            <input class="textInput" type="text" name="" value="">
 
-            <label for="changeEmail">Change E-Mail</label>
-            <span class="errorMsg" id="emailError">{{errorMsgEmail}}</span>
-            <span class="errorMsg" id="emailErrorJS"></span>
-            <input class="textInput" type="text" name="email" placeholder="address@example.ch">
+            <label for="">Logo</label>
+            <label for="">Cover Photo</label>
+            <label for="">Category</label>
+            <label for="">Services</label>
 
-            <label for="pw">Password</label>
-            <span class="errorMsg" id="pwError">{{errorMsgPw}}</span>
-            <span class="errorMsg" id="pwErrorJS"></span>
-            <input class="textInput" type="password" id="pw" name="pwLogIn">
+            <h3>Address</h3>
+            <label for="">Street</label>
+            <input class="textInput" type="text" name="street" value="">
 
-            <label for="pwConfirm">Confirm Password</label>
-            <span class="errorMsg" id="pwConfirmError">{{errorMsgPwConfirm}}</span>
-            <span class="errorMsg" id="pwConfirmErrorJS"></span>
-            <input class="textInput" type="password" id="pwConfirm" name="pwConfirm">
+            <label for="">City</label>
+            <div class="inlineInputContainer">
+              <input class="textInput" id="NAPInput" type="text" name="NAP" value="">
+              <input class="textInput" id="city" type="text" name="cityName" value="">
+            </div>
 
-            <input class="submitButton" type="submit" name="changeAccountData" value="Apply Changes">
+
+            <h3>Contact</h3>
+            <label for="">Email</label>
+            <input class="textInput" type="text" name="" value="">
+
+            <label for="">Phone</label>
+            <input class="textInput" type="text" name="" value="">
+
+            <h3>About the Company</h3>
+            <label for="">Description</label>
+            <textarea name="descritionTxt" rows="8" cols="80"></textarea>
+
+            <label for="">Info Images</label>
+
+            <label for="">How Can People Help?</label>
+            <textarea name="helpUsTxt" rows="8" cols="80"></textarea>
+
+            <input class="submitButton" type="submit" name="changeProfileData" value="Apply Changes">
           </form>
         </div>
       </div>

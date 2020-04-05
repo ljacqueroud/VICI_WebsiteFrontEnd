@@ -20,6 +20,8 @@ header {
   width: 100%;
   background: var(--bgColor1);
   display: flex;
+  position: fixed;
+  z-index: 1;
   flex-direction: row-reverse;
 }
 
@@ -71,7 +73,6 @@ form {
 
 main {
   position: fixed;
-  z-index: -1;
   top:0;
   padding: calc(100px + 7vh) 0;
   display:grid;
@@ -80,7 +81,9 @@ main {
   height:100vh;
   width: 100vw;
   overflow: auto;
+  z-index: 0;
   color: var(--textColor1);
+  background: var(--bgColor2);
 }
 
 .editProfileContainer {
@@ -102,6 +105,16 @@ main {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 20vw;
+  width: 60%;
   height:min-content;
+}
+
+/*MANAGE PROFILE FORM*/
+
+#NAPInput {
+  width: 20%;
+}
+
+#city {
+  width: 70%;
 }

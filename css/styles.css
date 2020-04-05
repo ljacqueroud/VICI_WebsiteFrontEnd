@@ -21,7 +21,7 @@
 }
 
 .submitButton {
-  width: 5vw;
+  width: min-content;
   height: 2.5em;
   border: none;
   background: var(--successColor2);
@@ -30,4 +30,10 @@
 
 .submitButton:hover {
   background: var(--successColor1);
+}
+
+.inlineInputsContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
