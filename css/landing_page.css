@@ -13,34 +13,47 @@ body {
   color: #333;
 }
 
-main {
-  background-image:url('../images/landingBg.jpg');
-  background-position: center right;
-  background-size: cover;
-  min-height: calc(100vh - 1.9em);
-  overflow: auto;
+/* ******** HEADER ********* */
+header {
+  width: 100%;
+  height: 2em;
+  background: var(--bgColor1);
+  display: flex;
+  flex-direction: row-reverse;
 }
 
-.ENSelect, .FRSelect {
-  display: none;
-}
-
-div #ENCheckbox:checked ~ .ENSelect {
-  display: block;
-}
-
-div #FRCheckbox:checked ~ .FRSelect {
-  display: block;
+.fullNav {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: auto 0px;
+  align-items: center;
+  padding-right: 5vw;
 }
 
 .langCheckbox {
-  background-color: var(--bgColor1);
-  color: var(--textColor1);
-  padding-right: 10%;
-  text-align: right;
+  color: var(--textColor2);
+  float: right;
+  width: 4em;
 }
 
-.langCheckboxLabel {
+.langCheckbox select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+}
+
+
+
+/* ******** MAIN ********* */
+main {
+  background-image:url('../img/landingBg.jpg');
+  background-position: center right;
+  background-size: cover;
+  min-height: calc(100vh - 3.9em);
+  overflow: auto;
 }
 
 .container {
@@ -107,6 +120,7 @@ div #FRCheckbox:checked ~ .FRSelect {
   color: var(--textColor2);
 }
 
+/* ******** FOOTER ********* */
 .mainFooter {
   display: flex;
   background-color: var(--bgColor1);

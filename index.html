@@ -1,25 +1,56 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/landing_page.css">
+
 
   <title>Vici | Home</title>
 </head>
 
 <body>
-  <main>
-    <div class="langCheckbox">
-      <input type="radio" id="ENCheckbox" name="lang" value="EN" checked="true">
-      <label class="langCheckboxLabel" for="ENCheckbox">EN</label>
-      <input type="radio" id="FRCheckbox" name="lang" value="FR">
-      <label class="langCheckboxLabel" for="FRCheckbox">FR</label>
-    </div>
+  <header>
+    <div class="fullNav">
+      <script id="language_script" data-languages="en,fr" data-debug="1" src="js/language_selector.js"></script>
 
-    <div class="ENContainer container">
-      <img src="images/viciLogo.jpg" id="viciLogo" alt="logo">
+      <language class="langCheckbox" id="langSelector" data-type="select">
+      </language>
+    </div>
+  </header>
+
+  <main>
+    <div lang="en" class="container">
+      <img src="img/viciLogo.jpg" id="viciLogo" alt="logo">
       <h1 class="mainTitle" id="mainTitleLanding">Welcome to VICI</h1>
       <h2>EN Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+
+      <div class="landingPageNav">
+        <div class="buttonPanel">
+          <div class="buttonDescription">
+            <p>Description. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          </div>
+          <div class="linkButton">
+            <a href="sign_in_up.html">Sign In/Up</a>
+          </div>
+        </div>
+
+        <div class="buttonPanel">
+          <div class="buttonDescription">
+            <p>Description. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          </div>
+          <div class="linkButton">
+            <a href="about.html">About Vici</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div lang="fr" class="container">
+      <img src="img/viciLogo.jpg" id="viciLogo" alt="logo">
+      <h1 class="mainTitle" id="mainTitleLanding">Welcome to VICI</h1>
+      <h2>FR Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
 
       <div class="landingPageNav">
         <div class="buttonPanel">
