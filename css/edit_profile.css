@@ -119,6 +119,7 @@ header form {
 .file_select_buttons>* {
   line-height:2.5em;
   background: var(--bgColor4);
+  color: var(--textColor4);
   text-transform: none;
   width: max-content;
   height: 2.5em;
@@ -129,11 +130,13 @@ header form {
 }
 
 .file_select_buttons>*:hover {
-  background: var(--successColor1);
+  background: var(--bgColorHover4);
+  color: var(--textColorHover4);
+
 }
 
 .file_select_buttons>*:active {
-  background: var(--successColor1);
+  background: var(--bgColorHover4);
 }
 
 .file_select {
