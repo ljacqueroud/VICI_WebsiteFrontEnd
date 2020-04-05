@@ -1,15 +1,14 @@
-body {
-  width: 100vw;
-  margin: 0px;
-}
-
 main {
   width: 100%;
-  padding: 20vh 0px;
+  min-height: calc(100vh - 3.9em);
+  
   display: flex;
-
+  
+  overflow: auto;
 }
-.fomContainer {
+
+.formContainer {
+  padding: 15vh 0px;
   display: block;
   margin: 0px auto;
 }

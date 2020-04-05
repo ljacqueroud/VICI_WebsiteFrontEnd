@@ -36,7 +36,7 @@ header {
   flex-direction: row;
   margin: auto 0px;
   align-items: center;
-  padding-right: 10vw;
+  padding-right: 10%;
 }
 
 .langCheckbox {
@@ -52,6 +52,42 @@ header {
   -moz-appearance: none;
   -webkit-appearance: none;
   border: 0;
+}
+
+/* ******** FOOTER ********* */
+.mainFooter {
+  display: flex;
+  background-color: var(--bgColor1);
+  color: var(--textColor1);
+  justify-content: space-between;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerContainer:first-child {
+  margin: 0.3em 0.5em 0.8em auto;
+  width: 7em;
+}
+
+.footerContainer:last-child {
+  margin: 0.3em auto 0.8em 0.5em;
+  width: 7em;
+}
+
+.footerContainer a {
+  color: var(--textColor1);
+  text-decoration: none;
+}
+
+.footerContainer a:hover {
+  color: var(--textColor2);
+}
+
+.footerContainer hr {
+  color: var(--textColor1);
 }
 
 /* *********** OTHER ********** */

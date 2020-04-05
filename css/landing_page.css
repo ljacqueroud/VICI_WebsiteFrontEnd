@@ -2,7 +2,7 @@
   background-color: inherit;
   color: inherit;
 	font-size:inherit;
-	
+
 }
 
 body {
@@ -83,38 +83,6 @@ main {
 .linkButton a:hover {
   color: var(--textColor2);
 }
-
-/* ******** FOOTER ********* */
-.mainFooter {
-  display: flex;
-  background-color: var(--bgColor1);
-  color: var(--textColor1);
-  justify-content: space-between;
-}
-
-.footerContainer {
-  display: flex;
-  flex-direction: column;
-}
-
-.footerContainer:first-child {
-  margin: 0.3em 0.5em 0.8em auto;
-  width: 7em;
-}
-
-.footerContainer:last-child {
-  margin: 0.3em auto 0.8em 0.5em;
-  width: 7em;
-}
-
-.footerContainer a {
-  text-decoration: none;
-}
-
-.footerContainer a:hover {
-  color: var(--textColor2);
-}
-
 
 @media(max-width:600px){
   .landingPageNav{
