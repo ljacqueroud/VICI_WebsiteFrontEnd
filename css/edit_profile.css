@@ -9,7 +9,7 @@ body{
 
 main {
   background-color: var(--bgColor1);
-  color: var(--textColor1);
+  color: var(--textColor4);
   padding: 10vh 20vw;
   display: grid;
 }
@@ -34,7 +34,7 @@ header {
   min-height: 70px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid var(--textColor1);
+  border: 2px solid var(--textHeaderColor);
   margin: 1vh;
 }
 
@@ -56,38 +56,21 @@ header form {
   background: none;
   height: 2em;
   margin: auto;
-  color: var(--buttonColor);
+  color: var(--textHeaderColor);
 }
 
 .logOutButton:hover {
-
-  text-decoration: underline;
+  color: var(--textHeaderHoverColor);
+  cursor: pointer;
 }
 
-/*MAIN
-
-main {
-  position: fixed;
-  top:0;
-  padding: calc(100px + 7vh) 0;
-  display:grid;
-  grid-template-columns:  1fr 4fr 1fr;
-  grid-template-rows: 1f;
-  height:100vh;
-  width: 100vw;
-  overflow: auto;
-  z-index: 0;
-  color: var(--textColor1);
-  background: var(--bgColor2);
-}
-
+/*MAIN*/
 .editProfileContainer {
-  overflow-y: auto;
-  height: calc(93vh - 100px);
   width: 100%;
 }
+
 .formTitle {
-  border-bottom: 2px solid var(--textColor1);
+  border-bottom: 2px solid var(--textColor4);
 }
 
 .formContainer{
@@ -116,12 +99,12 @@ main {
 
 /*FILER READER*/
 .file_reader {
-  background: var(--bgColor2);
+  background: var(--bgColor1);
   width: 100%
 }
 
 .file_reader>*,.file_reader>*>* {
-  background: var(--bgColor2);
+  background: var(--bgColor1);
   font-family: var(--fontParagraph);
   font-size: 11pt;
   letter-spacing: normal;
@@ -135,12 +118,11 @@ main {
 
 .file_select_buttons>* {
   line-height:2.5em;
-  background: var(--successColor2);
+  background: var(--bgColor4);
   text-transform: none;
   width: max-content;
   height: 2.5em;
   border: none;
-  background: var(--successColor2);
   margin: 0px 0.5em;
   padding: 0 1em;
 
