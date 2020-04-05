@@ -1,5 +1,12 @@
 /* @author: Jonas T. Ulbrich
  * @date: 27.03.2020
+ * To implement call script in head and set following html at desired position:
+ <div id="file_reader_id" class="file_reader" >
+   <script type="text/javascript">
+     var readerImgs=new file_reader('file_reader_id','fs','cb','dz');
+   </script>
+ </div>
+ * to deactivate  drag and drop don't feed 'dz' as parameter or set to false/undefined
  */
 
  // Check for the various File API support.
@@ -31,7 +38,7 @@ class file_reader extends FileReader {
     this.drop_zone_id=drop_zone_id;
     this.drop_zone_file_container_id=drop_zone_id+'_file_container';
 
-    var html=`<input type="file" id="`+this.file_select_id+`" name="files[]" multiple />
+    var html=`<input class="file_select" type="file" id="`+this.file_select_id+`" name="" multiple />
     <div class="drop_zone" id="`+this.drop_zone_id+`">
       <div class="drop_zone_file_container" id="`+this.drop_zone_file_container_id+`">
       </div>
@@ -53,8 +60,8 @@ class file_reader extends FileReader {
 
   SetupDragZone(drop_zone_id) {
     var dropZone = document.getElementById(drop_zone_id);
-    dropZone.addEventListener('dragover', this.DragOver_cb, false);
-    dropZone.addEventListener('dragleave', this.DragLeave_cb, false);
+    dropZone.addEventListener('dragover', this.DragOver_cb.bind(this), false);
+    dropZone.addEventListener('dragleave', this.DragLeave_cb.bind(this), false);
     dropZone.addEventListener('drop', this.DropFile_cb.bind(this), false);
     document.getElementById(drop_zone_id).innerHTML+= '\n<p class="drop_here">Drop files here</p>';
   }
@@ -161,12 +168,16 @@ class file_reader extends FileReader {
           that.file_data[file_idx]=r;
 
           //set tb
-          document.getElementById(this.drop_zone_file_container_id+'_tb'+file_idx).src="img/plain_file_ico.png";
+          document.getElementById(that.drop_zone_file_container_id+'_tb'+file_idx).src="img/plain_file_ico.png";
         };
       })(idx,this);
 
       //read file
       reader.readAsDataURL(file);
     }
+  }
+
+  GetFileData() {
+    return this.file_data;
   }
 }
