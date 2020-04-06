@@ -5,8 +5,27 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/edit_profile.css">
     <title>Vici | Edit Profile</title>
+
+    <script type="text/javascript">
+      function addOpeningHourCb() {
+        var openingHoursList=document.getElementById('openingHoursList');
+        nbOfChilds=openingHoursList.childElementCount;
+
+        if(nbOfChilds<7) {
+          var listItem=document.createElement('li');
+          listItem.innerHTML=`<input class="textInput dayInput" type="text" name="dayInput`+(nbOfChilds+1)+`" value="">
+          <input class="textInput hoursInput" type="text" name="hoursInput`+(nbOfChilds+1)+`" value="">`;
+          openingHoursList.appendChild(listItem);
+        }
+        else {
+          //do this in a more fancy way if more time
+          alert('A regular week has only 7 days ;)');
+        }
+
+      }
+    </script>
   </head>
-  <body onload="setupFormCheck([readerLogo, readerCover, readerImgs])">
+  <body>
     <header>
       <div class="fullNav">
         <div id="profileIcon">
@@ -55,77 +74,102 @@
             <label for="">Cover Photo</label>
             <input type="file" name="coverImg" value="">
 
+            <h3>Opening Hours</h3>
+            <div class="openingHoursContainer">
+              <ul id="openingHoursList">
+                <li>
+                  <input class="textInput dayInput" type="text" name="dayInput1" value="" placeholder="Mo-Fr">
+                  <input class="textInput hoursInput" type="text" name="hoursInput1" value="" placeholder="8:30-16:30">
+                </li>
+              </ul>
+              <button type="button" name="button" onclick="addOpeningHourCb()">+</button>
+            </div>
+
             <h3>Categories</h3>
-            <div class="categoryContainer">
-              <div class="categoryRadioContainer">
-                <label for="restaurantRadio">Restaurant</label>
-                <input type="radio" class="categoryRadio" id="restaurantRadio" name="Category" value="restaurant">
+            <div class="selectionContainer">
+              <div class="radioOrCheckboxContainer">
+                <input type="radio" class="radioOrCheckbox" id="restaurantRadio" name="Category" value="restaurant">
+                <label for="restaurantRadio" class="textLabelRadioOrCheckbox">Restaurant</label>
+                <label for="restaurantRadio" class="icon" id="restaurantRadioIcon"></label>
               </div>
-              <div class="categoryRadioContainer">
-                <label for="epicerieRadio">Grocery Shop</label>
-                <input type="radio" class="categoryRadio" id="epicerieRadio" name="Category" value="epicerie">
+              <div class="radioOrCheckboxContainer">
+                <input type="radio" class="radioOrCheckbox" id="epicerieRadio" name="Category" value="epicerie">
+                <label for="epicerieRadio" class="textLabelRadioOrCheckbox">Grocery Shop</label>
+                <label for="epicerieRadio" class="icon" id="epicerieRadioIcon"></label>
               </div>
-              <div class="categoryRadioContainer">
-                <label for="fruitVegetablesRadio">Agricultural Products</label>
-                <input type="radio" class="categoryRadio" id="fruitVegetablesRadio" name="Category" value="fruitVegetables">
+              <div class="radioOrCheckboxContainer">
+                <input type="radio" class="radioOrCheckbox" id="fruitVegetablesRadio" name="Category" value="fruitVegetables">
+                <label for="fruitVegetablesRadio" class="textLabelRadioOrCheckbox">Agricultural Products</label>
+                <label for="fruitVegetablesRadio" class="icon" id="fruitVegetablesRadioIcon"></label>
               </div>
-              <div class="categoryRadioContainer">
-                <label for="artisanatRadio">Handcraft</label>
-                <input type="radio" class="categoryRadio" id="artisanatRadio" name="Category" value="artisanat">
+              <div class="radioOrCheckboxContainer">
+                <input type="radio" class="radioOrCheckbox" id="artisanatRadio" name="Category" value="artisanat">
+                <label for="artisanatRadio" class="textLabelRadioOrCheckbox">Handcraft</label>
+                <label for="artisanatRadio" class="icon" id="artisanatRadioIcon"></label>
               </div>
-              <div class="categoryRadioContainer">
-                <label for="fleuristeRadio">Florist</label>
-                <input type="radio" class="categoryRadio" id="fleuristeRadio"name="Category" value="fleuriste">
+              <div class="radioOrCheckboxContainer">
+                <input type="radio" class="radioOrCheckbox" id="fleuristeRadio"name="Category" value="fleuriste">
+                <label for="fleuristeRadio" class="textLabelRadioOrCheckbox">Florist</label>
+                <label for="fleuristeRadio" class="icon" id="fleuristeRadioIcon"></label>
               </div>
-              <div class="categoryRadioContainer">
-                <label for="modeRadio">Mode and Clothing</label>
-                <input type="radio" class="categoryRadio" id="modeRadio"name="Category" value="mode">
+              <div class="radioOrCheckboxContainer">
+                <input type="radio" class="radioOrCheckbox" id="modeRadio"name="Category" value="mode">
+                <label for="modeRadio" class="textLabelRadioOrCheckbox">Mode and Clothing</label>
+                <label for="modeRadio" class="icon" id="modeRadioIcon"></label>
               </div>
-              <div class="categoryRadioContainer">
-                <label for="boulangerieRadio">Baker</label>
-                <input type="radio" class="categoryRadio" id="boulangerieRadio"name="Category" value="boulangerie">
+              <div class="radioOrCheckboxContainer">
+                <input type="radio" class="radioOrCheckbox" id="boulangerieRadio"name="Category" value="boulangerie">
+                <label for="boulangerieRadio" class="textLabelRadioOrCheckbox">Baker</label>
+                <label for="boulangerieRadio" class="icon" id="boulangerieRadioIcon"></label>
               </div>
-              <div class="categoryRadioContainer">
-                <label for="childrenRadio">Products for Children</label>
-                <input type="radio" class="categoryRadio" id="childrenRadio"name="Category" value="children">
+              <div class="radioOrCheckboxContainer">
+                <input type="radio" class="radioOrCheckbox" id="childrenRadio"name="Category" value="children">
+                <label for="childrenRadio" class="textLabelRadioOrCheckbox">Products for Children</label>
+                <label for="childrenRadio" class="icon" id="childrenRadioIcon"></label>
               </div>
-              <div class="categoryRadioContainer">
-                <label for="alimentaireRadio">Food Industry</label>
-                <input type="radio" class="categoryRadio" id="alimentaireRadio"name="Category" value="alimentaire">
+              <div class="radioOrCheckboxContainer">
+                <input type="radio" class="radioOrCheckbox" id="alimentaireRadio"name="Category" value="alimentaire">
+                <label for="alimentaireRadio" class="textLabelRadioOrCheckbox">Food Industry</label>
+                <label for="alimentaireRadio" class="icon" id="alimentaireRadioIcon"></label>
               </div>
-              <div class="categoryRadioContainer">
-                <label for="sportRadio">Sport</label>
-                <input type="radio" class="categoryRadio" id="sportRadio"name="Category" value="sport">
+              <div class="radioOrCheckboxContainer">
+                <input type="radio" class="radioOrCheckbox" id="sportRadio"name="Category" value="sport">
+                <label for="sportRadio" class="textLabelRadioOrCheckbox">Sport</label>
+                <label for="sportRadio" class="icon" id="sportRadioIcon" ></label>
               </div>
-              <div class="categoryRadioContainer" id="otherCategoryContainer">
-                <label for="otherRadio">Other</label>
-                <input type="radio" class="categoryRadio" id="otherRadio"name="Category" value="other">
-                <input class="textInput" type="text" name="categoryOtherName" value="">
+              <div class="radioOrCheckboxContainer selectOther">
+                <input type="radio" class="radioOrCheckbox" id="otherRadio"name="Category" value="other">
+                <input class="textInput" type="text" name="categoryOtherName" value="" placeholder="Other">
+                <label for="otherRadio" class="icon" id="otherRadioIcon"></label>
               </div>
             </div>
 
             <h3>Services</h3>
-            <div class="servicesContainer">
-              <div class="serviceCheckbox">
-                <label for="directShopping">Direct Shopping</label>
-                <input type="checkbox" id="directShopping" name="servicesArray[]" />
+            <div class="selectionContainer">
+              <div class="radioOrCheckboxContainer">
+                <input type="checkbox" class="radioOrCheckbox" id="directShopping" name="servicesArray[]" />
+                <label for="directShopping" class="textLabelRadioOrCheckbox">Direct Shopping</label>
+                <label for="directShopping" class="icon" id="directShoppingIcon"></label>
               </div>
-              <div class="serviceCheckbox">
-                <label for="onlineShopping">Online Shopping</label>
-                <input type="checkbox" id="onlineShopping" name="servicesArray[]" />
+              <div class="radioOrCheckboxContainer">
+                <input type="checkbox" class="radioOrCheckbox" id="onlineShopping" name="servicesArray[]" />
+                <label for="onlineShopping" class="textLabelRadioOrCheckbox">Online Shopping</label>
+                <label for="onlineShopping" class="icon" id="onlineShoppingIcon"></label>
               </div>
-              <div class="serviceCheckbox">
-                <label for="charity">Charity</label>
-                <input type="checkbox" id="charity" name="servicesArray[]" />
+              <div class="radioOrCheckboxContainer">
+                <input type="checkbox" class="radioOrCheckbox" id="charity" name="servicesArray[]" />
+                <label for="charity" class="textLabelRadioOrCheckbox">Charity</label>
+                <label for="charity" class="icon" id="charityIcon"></label>
               </div>
-              <div class="serviceCheckbox">
-                <label for="delivery">Delivery</label>
-                <input type="checkbox" id="delivery" name="servicesArray[]" />
+              <div class="radioOrCheckboxContainer">
+                <input type="checkbox" class="radioOrCheckbox" id="delivery" name="servicesArray[]" />
+                <label for="delivery" class="textLabelRadioOrCheckbox">Delivery</label>
+                <label for="delivery" class="icon" id="deliveryIcon"></label>
               </div>
-              <div class="serviceCheckbox servicesOther">
-                <label for="otherServices">Other</label>
-                <input type="checkbox" id="otherServices" name="servicesOther"/>
-                <input class="textInput" type="text" name="servicesOtherName" value="">
+              <div class="radioOrCheckboxContainer selectOther">
+                <input type="checkbox" class="radioOrCheckbox" id="otherServices" name="servicesOther"/>
+                <input class="textInput" type="text" name="servicesOtherName" value="" placeholder="Other">
+                <label for="otherServices" class="icon" id="otherServicesIcon"></label>
               </div>
             </div>
 
