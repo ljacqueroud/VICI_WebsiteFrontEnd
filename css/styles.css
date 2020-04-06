@@ -150,6 +150,7 @@ header {
 /* *********** OTHER ********** */
 .errorMsg {
   color:var(--alertColor);
+  display: none;
 }
 
 .textInput {
