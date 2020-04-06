@@ -54,17 +54,32 @@ header {
   height: 100%;
   display: flex;
   flex-direction: row;
-  margin: auto 0px;
+  margin: 0px;
   align-items: center;
-  padding-right: 10%;
 }
 
-.langCheckbox {
-  float: right;
+.headerHome {
+  position: absolute;
+  left: 2em;
+}
+
+.headerHome a {
+  text-decoration: none;
+  color: var(--textHeaderColor);
+}
+
+.headerHome a:hover {
+  color: var(--textHeaderHoverColor);
+  cursor: pointer;
+}
+
+.headerLang {
+  position: absolute;
+  right: 9em;
   width: 4em;
 }
 
-.langCheckbox select {
+.headerLang select {
   background-color: inherit;
   color: var(--textHeaderColor);
   font-size: 12pt;
@@ -74,7 +89,22 @@ header {
   border: 0;
 }
 
-.langCheckbox select:hover {
+.headerLang select:hover {
+  color: var(--textHeaderHoverColor);
+  cursor: pointer;
+}
+
+.headerSignIn {
+  position: absolute;
+  right: 3em;
+}
+
+.headerSignIn a {
+  text-decoration: none;
+  color: var(--textHeaderColor);
+}
+
+.headerSignIn a:hover {
   color: var(--textHeaderHoverColor);
   cursor: pointer;
 }
