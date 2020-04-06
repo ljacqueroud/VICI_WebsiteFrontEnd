@@ -17,3 +17,13 @@ main {
 .aboutContainer {
   padding: 5vh 0;
 }
+
+.aboutFaces {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.aboutFaces img {
+  width: 12%;
+}
