@@ -3,12 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/file_reader.css">
     <link rel="stylesheet" href="css/edit_profile.css">
-    <script type="text/javascript" src="js/file_reader.js" charset="utf-8"></script>
-    <script type="text/javascript" src="js/edit_profile_check.js" charset="utf-8"></script>
-
-    </script>
     <title>Vici | Edit Profile</title>
   </head>
   <body onload="setupFormCheck([readerLogo, readerCover, readerImgs])">
@@ -22,6 +17,7 @@
         </form>
       </div>
     </header>
+
     <main>
       <div class="editProfileContainer">
         <div class="formContainer">
@@ -55,28 +51,83 @@
             <input class="textInput" type="text" name="" value="">
 
             <label for="">Logo</label>
-            <div id="logoFileReader" class="file_reader" >
-              <script type="text/javascript">
-                var readerLogo=new file_reader('logoFileReader','logoFileReaderFS','logoFileReaderC','logoFileReaderDZ');
-              </script>
-            </div>
+            <input type="file" name="logoImg" value="">
             <label for="">Cover Photo</label>
-            <div id="coverFileReader" class="file_reader" >
-              <script type="text/javascript">
-                var readerCover=new file_reader('coverFileReader','coverFileReaderFS','coverFileReaderC','coverFileReaderDZ');
-              </script>
+            <input type="file" name="coverImg" value="">
+
+            <h3>Categories</h3>
+            <div class="categoryContainer">
+              <div class="categoryRadioContainer">
+                <label for="restaurantRadio">Restaurant</label>
+                <input type="radio" class="categoryRadio" id="restaurantRadio" name="Category" value="restaurant">
+              </div>
+              <div class="categoryRadioContainer">
+                <label for="epicerieRadio">Grocery Shop</label>
+                <input type="radio" class="categoryRadio" id="epicerieRadio" name="Category" value="epicerie">
+              </div>
+              <div class="categoryRadioContainer">
+                <label for="fruitVegetablesRadio">Agricultural Products</label>
+                <input type="radio" class="categoryRadio" id="fruitVegetablesRadio" name="Category" value="fruitVegetables">
+              </div>
+              <div class="categoryRadioContainer">
+                <label for="artisanatRadio">Handcraft</label>
+                <input type="radio" class="categoryRadio" id="artisanatRadio" name="Category" value="artisanat">
+              </div>
+              <div class="categoryRadioContainer">
+                <label for="fleuristeRadio">Florist</label>
+                <input type="radio" class="categoryRadio" id="fleuristeRadio"name="Category" value="fleuriste">
+              </div>
+              <div class="categoryRadioContainer">
+                <label for="modeRadio">Mode and Clothing</label>
+                <input type="radio" class="categoryRadio" id="modeRadio"name="Category" value="mode">
+              </div>
+              <div class="categoryRadioContainer">
+                <label for="boulangerieRadio">Baker</label>
+                <input type="radio" class="categoryRadio" id="boulangerieRadio"name="Category" value="boulangerie">
+              </div>
+              <div class="categoryRadioContainer">
+                <label for="childrenRadio">Products for Children</label>
+                <input type="radio" class="categoryRadio" id="childrenRadio"name="Category" value="children">
+              </div>
+              <div class="categoryRadioContainer">
+                <label for="alimentaireRadio">Food Industry</label>
+                <input type="radio" class="categoryRadio" id="alimentaireRadio"name="Category" value="alimentaire">
+              </div>
+              <div class="categoryRadioContainer">
+                <label for="sportRadio">Sport</label>
+                <input type="radio" class="categoryRadio" id="sportRadio"name="Category" value="sport">
+              </div>
+              <div class="categoryRadioContainer" id="otherCategoryContainer">
+                <label for="otherRadio">Other</label>
+                <input type="radio" class="categoryRadio" id="otherRadio"name="Category" value="other">
+                <input class="textInput" type="text" name="categoryOtherName" value="">
+              </div>
             </div>
 
-            <h3>Category</h3>
-            <label for=""></label>
-            <input type="checkbox" name="categoryArray[]" />
-            <input type="checkbox" name="categoryArray[]" />
-            <input type="checkbox" name="categoryArray[]" />
-            <input type="checkbox" name="categoryArray[]" />
-            <input type="checkbox" name="categoryArray[]" />
-            <input type="checkbox" name="categoryArray[]" />
-            <label for="">Services</label>
-            <input type="checkbox" name="servicesArray[]" />
+            <h3>Services</h3>
+            <div class="servicesContainer">
+              <div class="serviceCheckbox">
+                <label for="directShopping">Direct Shopping</label>
+                <input type="checkbox" id="directShopping" name="servicesArray[]" />
+              </div>
+              <div class="serviceCheckbox">
+                <label for="onlineShopping">Online Shopping</label>
+                <input type="checkbox" id="onlineShopping" name="servicesArray[]" />
+              </div>
+              <div class="serviceCheckbox">
+                <label for="charity">Charity</label>
+                <input type="checkbox" id="charity" name="servicesArray[]" />
+              </div>
+              <div class="serviceCheckbox">
+                <label for="delivery">Delivery</label>
+                <input type="checkbox" id="delivery" name="servicesArray[]" />
+              </div>
+              <div class="serviceCheckbox servicesOther">
+                <label for="otherServices">Other</label>
+                <input type="checkbox" id="otherServices" name="servicesOther"/>
+                <input class="textInput" type="text" name="servicesOtherName" value="">
+              </div>
+            </div>
 
             <h3>Address</h3>
             <label for="">Street</label>
@@ -87,6 +138,8 @@
               <input class="textInput" id="NAPInput" type="text" name="NAP" value="">
               <input class="textInput" id="city" type="text" name="cityName" value="">
             </div>
+            <label for="">Country</label>
+            <input class="textInput" type="text" name="country" value="">
 
 
             <h3>Contact</h3>
@@ -101,11 +154,7 @@
             <textarea name="descritionTxt" rows="8" cols="80"></textarea>
 
             <label for="">Info Images</label>
-            <div id="imagesFileReader" class="file_reader" >
-              <script type="text/javascript">
-                var readerImgs=new file_reader('imagesFileReader','imagesFileReaderFS','imagesFileReaderC','imagesFileReaderDZ');
-              </script>
-            </div>
+            <input type="file" name="additionalImgs[]" value="" multiple>
 
             <label for="">How Can People Help?</label>
             <textarea name="helpUsTxt" rows="8" cols="80"></textarea>

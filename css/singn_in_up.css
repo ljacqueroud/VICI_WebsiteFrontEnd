@@ -5,6 +5,10 @@ main {
   overflow: auto;
 }
 
+p, label, input {
+  font-size: 12pt;
+}
+
 .formContainer {
   padding: 15vh 0px;
   display: block;
@@ -40,7 +44,7 @@ main {
 .changeForm p {
   text-decoration: underline;
   color: var(--textColor1);
-  margin: 0px 0px 2vh 0px;
+  margin: 0px 0px -1vh 0px;
   padding:  0px;
   text-align: center;
 }
