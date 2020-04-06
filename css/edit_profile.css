@@ -135,7 +135,8 @@ h3 {
   display: block;
   width: 3vh;
   height: 3vh;
-  background: var(--bgColor2);
+  background-color: var(--bgColor2);
+  border:2px solid transparent;
   border-radius: 50%;
   margin: 0 auto;
 }
@@ -164,15 +165,17 @@ h3 {
 }
 
 .radioOrCheckbox:checked ~ .icon {
-  background: var(--bgColor3);
+  background-color: var(--bgColor3);
+  border:2px solid var(--bgColor3);
 }
 
 .radioOrCheckbox:checked ~ .icon:hover {
   background: var(--bgColorHover3);
+  border:2px solid var(--bgColorHover3);
 }
 
 .icon:hover {
-  background: var(--bgColorHover4);
+  background-color: var(--bgColorHover4);
 }
 
 .radioOrCheckboxContainer .textInput {
@@ -195,7 +198,7 @@ button {
 }
 
 button:hover {
-  background: var(--bgColorHover4);
+  background-color: var(--bgColorHover4);
   color: var(--textColorHover4);
 }
 
@@ -209,4 +212,111 @@ button:hover {
 
 input[type=file] {
   margin: 1vh 0;
+}
+
+/*ICONES STYLES*/
+#restaurantRadioIcon{
+  background: url('../img/Restaurant_ico.svg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#epicerieRadioIcon {
+  background: url('../img/Epicerie_ico.svg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#fruitVegetablesRadioIcon {
+  background-size:contain;
+  background: url('../img/Veggies_ico.svg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#artisanatRadioIcon {
+  background: url('../img/Handcraft_ico.svg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#fleuristeRadioIcon{
+  background: url('../img/Flower_ico.svg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#modeRadioIcon {
+  background: url('../img/Mode_ico.svg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#boulangerieRadioIcon {
+  background: url('../img/Baker_ico.svg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#childrenRadioIcon {
+  background: url('../img/Baby_ico.svg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#alimentaireRadioIcon {
+  background: url('../img/Baker_ico.svg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#sportRadioIcon {
+  background: url('../img/Sport_ico.svg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#otherRadioIcon, #otherServicesIcon {
+  background: url('../img/Other_ico.svg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#directShoppingIcon {
+  background: url('../img/Shopping_ico.svg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#onlineShoppingIcon {
+  background: url('../img/Online_ico.svg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#charityIcon {
+  background: url('../img/Charity_ico.svg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#deliveryIcon {
+  background: url('../img/Delivery_ico.svg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: contain;
 }
