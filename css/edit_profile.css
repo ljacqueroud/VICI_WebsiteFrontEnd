@@ -10,7 +10,7 @@ body{
 main {
   background-color: var(--bgColor1);
   color: var(--textColor4);
-  padding: 10vh 20vw;
+  padding: 6vh 20vw 10vh 20vw;
   display: grid;
 }
 
@@ -91,7 +91,21 @@ header form {
   height:min-content;
 }
 
+.formContainer h2:first-child {
+  margin-top:4vh;
+}
+
+
+
 /*MANAGE PROFILE FORM*/
+.textInput {
+  margin: 0 0 0.4vh 0;
+}
+
+h3 {
+  border-bottom: 2px solid var(--textColor4);
+  margin: 2vh 0 1vh 0; 
+}
 
 #NAPInput {
   width: 20%;
@@ -104,6 +118,7 @@ header form {
 .selectionContainer {
   display: flex;
   flex-wrap: wrap;
+  margin: 2vh 0;
 }
 
 .radioOrCheckboxContainer {
@@ -149,7 +164,15 @@ header form {
 }
 
 .radioOrCheckbox:checked ~ .icon {
-  background: blue;
+  background: var(--bgColor3);
+}
+
+.radioOrCheckbox:checked ~ .icon:hover {
+  background: var(--bgColorHover3);
+}
+
+.icon:hover {
+  background: var(--bgColorHover4);
 }
 
 .radioOrCheckboxContainer .textInput {
@@ -174,4 +197,16 @@ button {
 button:hover {
   background: var(--bgColorHover4);
   color: var(--textColorHover4);
+}
+
+.dayInput {
+  width: 20%;
+}
+
+.hoursInput {
+  width: 70%;  
+}
+
+input[type=file] {
+  margin: 1vh 0;
 }
