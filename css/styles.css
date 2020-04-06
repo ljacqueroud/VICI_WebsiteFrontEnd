@@ -159,6 +159,12 @@ header {
   padding: 0.2em 0 0.2em 1em;
 }
 
+textarea {
+  border: none;
+  background: var(--bgColor2);
+  padding: 0.2em 0 0.2em 1em;
+}
+
 .submitButton {
   width: min-content;
   height: 2.5em;
