@@ -96,7 +96,8 @@ header {
 
 .headerSignIn {
   position: absolute;
-  right: 3em;
+  right: 1em;
+  width: 6em;
 }
 
 .headerSignIn a {
