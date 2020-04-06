@@ -1,9 +1,7 @@
 main {
   width: 100%;
   min-height: calc(100vh - 3.9em);
-  
   display: flex;
-  
   overflow: auto;
 }
 
@@ -18,10 +16,10 @@ main {
   flex-direction: column;
   width:20vw;
 
-  background: var(--bgColor2);
+  background: var(--bgColor1);
   padding: 50px;
   border-radius: 20px;
-  color: var(--textColor2);
+  color: var(--textColor4);
 }
 
 .formDescription p {
@@ -30,16 +28,26 @@ main {
   text-align: center;
 }
 
+.formDescription a {
+  color: var(--textColor1);
+}
+
+.formDescription a:hover {
+  color: var(--textColorHover1);
+}
+
+
 .changeForm p {
   text-decoration: underline;
-  color: var(--successColor2);
+  color: var(--textColor1);
   margin: 0px 0px 2vh 0px;
   padding:  0px;
   text-align: center;
 }
 
-.changeForm:hover {
+.changeForm p:hover {
   cursor: pointer;
+  color: var(--textColorHover1);
 }
 
 #submitErrorJS {

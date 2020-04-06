@@ -7,12 +7,11 @@ function setupFormCheck(file_reader_array) {
       ///START SUBMIT CALLBACK//////////////////////////////////////////////////
       var hidden_inputs="";
       for(var i=0,r;r=reader_array[i];i++) {
-        fd=r.file_data;
         fl=r.file_list;
 
-        for(var j=0,f;f=fd[j];j++){
+        for(var j=0,f;f=fl[j];j++){
           //create for each file a hidden input with its data as value
-          hidden_inputs+=`<input type="hidden" name="`+fl[j].name+`" value="`+f+`">`;
+          hidden_inputs+=`<input type="hidden" name="`+(i+1)*(j+1)+`" value="`+f+`">`;
         }
       }
       //add hidden inputs to form before submitting
