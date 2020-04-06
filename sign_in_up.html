@@ -29,7 +29,8 @@
           <span class="errorMsg" id="emailErrorJS"></span>
           <input class="textInput" type="text" id="email" name="emailLogIn" placeholder="address@example.ch">
 
-          <label for="companyName" class="registerInput">Your Company</label>
+          <label lang="en" for="companyName" class="registerInput">Your Company</label>
+          <label lang="fr" for="companyName" class="registerInput">Your Company</label>
           <span class="errorMsg registerInput" id="companyNameError">{{errorMsgCompany}}</span>
           <span class="errorMsg registerInput" id="companyNameErrorJS"></span>
           <input class="registerInput textInput" type="text" id="companyName" name="companyName" placeholder="My Company">
@@ -39,25 +40,31 @@
           <span class="errorMsg" id="pwErrorJS"></span>
           <input class="textInput" type="password" id="pw" name="pwLogIn">
 
-          <label for="pwConfirm" class="registerInput">Confirm Password</label>
+          <label lang="en" for="pwConfirm" class="registerInput">Confirm Password</label>
+          <label lang="fr" for="pwConfirm" class="registerInput">Confirm Password</label>
           <span class="errorMsg registerInput" id="pwConfirmError">{{errorMsgPwConfirm}}</span>
           <span class="errorMsg registerInput" id="pwConfirmErrorJS"></span>
           <input class="registerInput textInput" type="password" id="pwConfirm" name="pwConfirm">
 
           <div class="formDescription registerInput">
-            <p>I have read and accept the <a href="#">terms and conditions...</a></p>
+            <p lang="en">I have read and accept the <a href="#">terms and conditions...</a></p>
+            <p lang="fr">I have read and accept the <a href="#">terms and conditions...</a></p>
           </div>
           <label class="registerInput" id="termsAndConditionsLabel" for="termsAndConditionsCheck"></label>
           <input class="registerInput" id="termsAndConditionsCheck" type="checkbox" name="" value="">
 
           <div class="formDescription">
-            <p class="logInInput">New to this site and you don't have an account?</p>
-            <p class="registerInput">You already have an account?</p>
+            <p lang="en" class="logInInput">New to this site and you don't have an account?</p>
+            <p lang="fr" class="logInInput">New to this site and you don't have an account?</p>
+            <p lang="en" class="registerInput">You already have an account?</p>
+            <p lang="fr" class="registerInput">You already have an account?</p>
           </div>
 
           <label class="changeForm" for="registerFormCheck">
-            <p class="registerInput">Log In instead...</p>
-            <p class="logInInput">Register here...</p>
+            <p lang="en" class="registerInput">Log In instead...</p>
+            <p lang="fr" class="registerInput">Log In instead...</p>
+            <p lang="en" class="logInInput">Register here...</p>
+            <p lang="fr" class="logInInput">Register here...</p>
           </label>
 
           <span class="errorMsg" id="submitErrorJS"></span>
@@ -68,18 +75,23 @@
     </main>
 
     <footer>
-      <div class="mainFooter signInUpFooter">
+      <div class="mainFooter landingFooter">
         <div class="footerContainer">
-          <p>Help</p>
+          <p lang="en">Help</p>
+          <p lang="fr">Aide</p>
           <hr>
-          <a href="about.html">FAQ</a>
+          <a href="about.html#aboutFaq">FAQ</a>
         </div>
         <div class="footerContainer">
-          <p>About us</p>
+          <p lang="en">About us</p>
+          <p lang="fr">Sur nous</p>
           <hr>
-          <a href="about.html">Project</a>
-          <a href="about.html">Team</a>
-          <a href="about.html">Contact Us</a>
+          <a lang="en" href="about.html#aboutProject">Project</a>
+          <a lang="en" href="about.html#aboutTeam">Team</a>
+          <a lang="en" href="about.html#aboutContact">Contact Us</a>
+          <a lang="fr" href="about.html#aboutProject">Projet</a>
+          <a lang="fr" href="about.html#aboutTeam">Team</a>
+          <a lang="fr" href="about.html#aboutContact">Contactez Nous</a>
         </div>
       </div>
     </footer>
