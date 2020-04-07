@@ -133,8 +133,8 @@ h3 {
 
 .icon {
   display: block;
-  width: 3vh;
-  height: 3vh;
+  width: 4vh;
+  height: 4vh;
   background-color: var(--bgColor2);
   border:2px solid transparent;
   border-radius: 50%;
